@@ -1,0 +1,6 @@
+module Pods_ProductManager_ProductManagerTests {
+  umbrella header "Pods-ProductManager-ProductManagerTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+module Pods_ProductManager {
+  umbrella header "Pods-ProductManager-umbrella.h"
+
+  export *
+  module * { export * }
+}
