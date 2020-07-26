@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Text, View } from 'react-native';
 
-export default class App extends Component {
+export default class login extends Component {
     render() {
         return (
             <View style={{
@@ -9,7 +9,7 @@ export default class App extends Component {
                 justifyContent: 'center',
                 alignItems: 'center'
             }}>
-                <Text> Main PAGE! </Text>
+                <Text> Screen2 </Text>
             </View>
         );
     }
