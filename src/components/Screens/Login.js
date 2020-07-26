@@ -1,16 +1,19 @@
 import React, {Component} from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, TextInput } from 'react-native';
 
 export default class login extends Component {
     render() {
         return (
-            <View style={{
-                flex: 1,
-                justifyContent: 'center',
-                alignItems: 'center'
-            }}>
-                <Text> Screen2 </Text>
+            <View>
+                <Text>Hello</Text>
             </View>
         );
     }
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#3498db'
+    }
+});
