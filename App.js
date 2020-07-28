@@ -2,14 +2,13 @@ import React from 'react';
 import {View,Text,StyleSheet, TouchableOpacity} from 'react-native';
 import { Button } from './src/components/Button'
 import { Input } from "./src/components/Input";
-import {Logo} from "../src/components/Logo"
+import Logo from './src/components/Logo';
 
 
 const App = () => (
     <View style={styles.container}>
-    <View style = {styles.space}>
-        <Image source={Logo}/>
-    </View>
+        <Logo/>
+        <View style={styles.space}/>
         <Input>
             Username:
         </Input>
@@ -39,7 +38,7 @@ const styles = StyleSheet.create({
     space:{
         flex: .7,
         paddingBottom: 20
-        
+
     },
     row: {
         flexDirection: 'row',
