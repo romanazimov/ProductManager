@@ -1,6 +1,28 @@
-import React, {Component} from 'react';
-import { View, StyleSheet, Image, Text  } from 'react-native';
+import React, { Component } from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 import LoginForm from '../components/LoginCredentials';
+
+/*
+export default class LoginScreen extends component {
+    render() {
+        return (
+            <View style={styles.container}>
+                <Button />
+            </View>
+        );
+    }
+}
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#FFF',
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+});
+*/
+
 
 export default class loginScreen extends Component {
     render() {

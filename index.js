@@ -8,4 +8,4 @@ import Login from './src/screens/LoginScreen';
 import App from './App';
 
 
-AppRegistry.registerComponent('ProductManager', () => Login);
+AppRegistry.registerComponent('ProductManager', () => App);

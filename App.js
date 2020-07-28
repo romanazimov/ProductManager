@@ -1,16 +1,30 @@
-import React, {Component} from 'react';
-import { Text, View } from 'react-native';
+import React from 'react';
+import {View,Text,StyleSheet} from 'react-native';
+import { Button } from './src/components/Button'
+import { Input } from "./src/components/Input";
 
-export default class App extends Component {
-    render() {
-        return (
-            <View style={{
-                flex: 1,
-                justifyContent: 'center',
-                alignItems: 'center'
-            }}>
-                <Text> Main PAGE! </Text>
-            </View>
-        );
-    }
-}
+const App = () => (
+    <View style={styles.container}>
+        <Input>
+            Username:
+        </Input>
+        <Input>
+            Password:
+        </Input>
+
+        <Button>
+            Login
+        </Button>
+    </View>
+);
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#818479',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+});
+
+export default App;
