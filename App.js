@@ -1,12 +1,13 @@
 import React from 'react';
-import {View,Text,StyleSheet, TouchableOpacity} from 'react-native';
+import {View,Text,StyleSheet, TouchableOpacity, KeyboardAvoidingView} from 'react-native';
 import { Button } from './src/components/Button'
-import { Input } from "./src/components/Input";
-import Logo from './src/components/Logo';
+import { Input } from './src/components/Input';
+import { Logo } from './src/components/Logo';
 
 
 const App = () => (
-    <View style={styles.container}>
+    <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : null}
+                          style={styles.container}>
         <Logo/>
         <View style={styles.space}/>
         <Input>
@@ -25,7 +26,7 @@ const App = () => (
           <Text style={styles.link}>Sign up</Text>
         </TouchableOpacity>
       </View>
-    </View>
+    </KeyboardAvoidingView>
 );
 
 const styles = StyleSheet.create({

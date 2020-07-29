@@ -9,10 +9,10 @@ const Logo = () => (
 const styles = StyleSheet.create({
   image: {
     marginTop: 150,
+    marginBottom: 12,
     width: 128,
     height: 128,
-    marginBottom: 12,
   },
 });
 
-export default memo(Logo);
+export { Logo };

@@ -1,13 +1,13 @@
 import React from 'react';
 import { Text, StyleSheet, TouchableOpacity, View } from 'react-native';
 
-const Button = (props) => {
+const Button = (i) => {
     return (
         <View
             style={styles.viewContainer}>
             <TouchableOpacity style={styles.container}>
                 <Text style={styles.text}>
-                    {props.children}
+                    {i.children}
                 </Text>
             </TouchableOpacity>
         </View>
@@ -16,8 +16,9 @@ const Button = (props) => {
 
 const styles = StyleSheet.create({
     viewContainer:{
-        paddingTop: 10,
-        width: '100%'
+        paddingTop: 8,
+        marginBottom: 8,
+        width: '100%',
     },
     container: {
         backgroundColor: 'black',
