@@ -1,13 +1,14 @@
 import React from 'react';
 import {StyleSheet, View, TextInput} from 'react-native';
 
-const Input = (i) => {
+const Input = ({placeholder, ...props}) => {
         return (
             <View style={styles.container}>
                 <TextInput
-                    placeholder={i.children}
+                    placeholder={placeholder}
                     leftIcon={{ type: 'font-awesome', name: 'chevron-left' }}
                     style={styles.input}
+                    {...props}
                 />
             </View>
         );
@@ -23,9 +24,11 @@ const styles = StyleSheet.create({
 
     input: {
         height: 40,
-        backgroundColor: 'rgba(255,255,255,0.8)',
+        backgroundColor: 'rgba(255,255,255,1)',
         color: '#000',
-        paddingHorizontal: 10
+        paddingHorizontal: 10,
+        borderColor: 'black',
+        borderWidth: 1,
     },
 
 });

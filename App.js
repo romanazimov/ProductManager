@@ -4,22 +4,19 @@ import { Button } from './src/components/Button'
 import { Input } from './src/components/Input';
 import { Logo } from './src/components/Logo';
 
+const _onLoginPressed = () => {
+    const emailError = 3
+}
 
 const App = () => (
     <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : null}
                           style={styles.container}>
         <Logo/>
         <View style={styles.space}/>
-        <Input>
-            Username:
-        </Input>
-        <Input>
-            Password:
-        </Input>
+        <Input placeholder = ' Username: '/>
+        <Input placeholder = ' Password: '/>
 
-        <Button>
-            Login
-        </Button>
+        <Button text="Login" onPress={_onLoginPressed}/>
         <View style={styles.row}>
             <Text style={styles.label}>Don’t have an account? </Text>
             <TouchableOpacity>

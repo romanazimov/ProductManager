@@ -1,60 +1,50 @@
-import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import LoginForm from '../components/LoginCredentials';
+import React from 'react';
+import {View,Text,StyleSheet, TouchableOpacity, KeyboardAvoidingView} from 'react-native';
+import { Button } from '../components/Button'
+import { Input } from '../components/Input';
+import { Logo } from '../components/Logo';
 
-/*
-export default class LoginScreen extends component {
-    render() {
-        return (
-            <View style={styles.container}>
-                <Button />
-            </View>
-        );
-    }
+const _onLoginPressed = () => {
+    const emailError = 3
 }
+
+const Login = () => (
+    <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : null}
+                          style={styles.container}>
+        <Logo/>
+        <View style={styles.space}/>
+        <Input placeholder = ' Username: '/>
+        <Input placeholder = ' Password: '/>
+
+        <Button text="Login" onPress={_onLoginPressed}/>
+        <View style={styles.row}>
+            <Text style={styles.label}>Don’t have an account? </Text>
+            <TouchableOpacity>
+          <Text style={styles.link}>Sign up</Text>
+        </TouchableOpacity>
+      </View>
+    </KeyboardAvoidingView>
+);
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#FFF',
+        backgroundColor: '#818479',
         alignItems: 'center',
         justifyContent: 'center'
     },
-});
-*/
+    space:{
+        flex: .7,
+        paddingBottom: 20
 
-
-export default class loginScreen extends Component {
-    render() {
-        return (
-            <View style={styles.container}>
-
-                <View style={styles.logoContainer}>
-                    <Text style={styles.mainText}>Hello and welcome to ProductManager.</Text>
-                </View>
-
-                <View>
-                    <LoginForm/>
-                </View>
-            </View>
-        );
+    },
+    row: {
+        flexDirection: 'row',
+        marginTop: 4,
+      },
+    link: {
+        fontWeight: 'bold'
     }
-}
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#818479'
-    },
-    logoContainer: {
-        alignItems: 'center',
-        flexGrow: 1,
-        justifyContent: 'center'
-    },
-    mainText: {
-        color: '#000',
-        fontWeight: 'bold',
-        fontSize: 26,
-        textAlign: 'center'
-    },
 });
+
+export default Login;
