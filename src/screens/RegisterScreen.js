@@ -14,7 +14,7 @@ const Register = () => (
         <View style={styles.space}/>
         {/* <View style={styles.boxView}> */}
         <Logo/>
-    
+
             <Input placeholder = ' Email Address: '/>
             <Input placeholder = ' Password: '/>
             <Input placeholder = ' Confirm Password: '/>
@@ -26,7 +26,7 @@ const Register = () => (
             <Text style={styles.link}>Sign in</Text>
             </TouchableOpacity>
             {/* </View> */}
-          
+
         </View>
     </KeyboardAvoidingView>
 );
@@ -34,7 +34,7 @@ const Register = () => (
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#83968F',
+        backgroundColor: '#818479',
         alignItems: 'center',
         justifyContent: 'center'
     },

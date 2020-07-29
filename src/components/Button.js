@@ -3,11 +3,8 @@ import { Text, StyleSheet, TouchableOpacity, View } from 'react-native';
 
 const Button = ({text, onPress}) => {
     return (
-        <View
-            style={styles.viewContainer}>
-            <TouchableOpacity 
-            style={styles.container}
-            onPress={onPress}>
+        <View style={styles.viewContainer}>
+            <TouchableOpacity style={styles.container} onPress={onPress}>
                 <Text style={styles.text}>
                     {text}
                 </Text>

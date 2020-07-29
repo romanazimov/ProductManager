@@ -1,28 +1,13 @@
 import React from 'react';
 import {View,Text,StyleSheet, TouchableOpacity, KeyboardAvoidingView} from 'react-native';
-import { Button } from './src/components/Button'
-import { Input } from './src/components/Input';
-import { Logo } from './src/components/Logo';
-
-const _onLoginPressed = () => {
-    const emailError = 3
-}
+import { IconButton} from './src/components/IconButton';
 
 const App = () => (
     <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : null}
                           style={styles.container}>
-        <Logo/>
-        <View style={styles.space}/>
-        <Input placeholder = ' Username: '/>
-        <Input placeholder = ' Password: '/>
-
-        <Button text="Login" onPress={_onLoginPressed}/>
-        <View style={styles.row}>
-            <Text style={styles.label}>Don’t have an account? </Text>
-            <TouchableOpacity>
-          <Text style={styles.link}>Sign up</Text>
-        </TouchableOpacity>
-      </View>
+        <View style={styles.container}>
+            <IconButton text = {'Airplane'}/>
+        </View>
     </KeyboardAvoidingView>
 );
 
@@ -33,18 +18,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center'
     },
-    space:{
-        flex: .7,
-        paddingBottom: 20
-
-    },
-    row: {
-        flexDirection: 'row',
-        marginTop: 4,
-      },
-    link: {
-        fontWeight: 'bold'
-    }
 });
 
 export default App;
