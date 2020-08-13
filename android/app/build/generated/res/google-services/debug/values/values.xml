@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">965985956581-tanqknbhotakjn14gbjsm82odd7lrc8m.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://bucketly-db3b5.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">965985956581</string>
+    <string name="google_api_key" translatable="false">AIzaSyCZo7SsxSr90Mhp2cTNmpjXv_wJFGnpzOM</string>
+    <string name="google_app_id" translatable="false">1:965985956581:android:bcbb642a2edb58b8215a0c</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCZo7SsxSr90Mhp2cTNmpjXv_wJFGnpzOM</string>
+    <string name="google_storage_bucket" translatable="false">bucketly-db3b5.appspot.com</string>
+    <string name="project_id" translatable="false">bucketly-db3b5</string>
+</resources>

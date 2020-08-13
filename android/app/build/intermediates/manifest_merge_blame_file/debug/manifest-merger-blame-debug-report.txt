@@ -15,55 +15,166 @@
 12-->/Users/romanazimov/Desktop/GitHub/ProductManager/android/app/src/main/AndroidManifest.xml:4:5-67
 12-->/Users/romanazimov/Desktop/GitHub/ProductManager/android/app/src/main/AndroidManifest.xml:4:22-64
 13    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-13-->[com.facebook.flipper:flipper:0.37.0] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/15cacb4283a7a012221743aaad25fff1/jetified-flipper-0.37.0/AndroidManifest.xml:16:5-76
-13-->[com.facebook.flipper:flipper:0.37.0] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/15cacb4283a7a012221743aaad25fff1/jetified-flipper-0.37.0/AndroidManifest.xml:16:22-73
-14
-15    <application
-15-->/Users/romanazimov/Desktop/GitHub/ProductManager/android/app/src/main/AndroidManifest.xml:6:5-25:19
-16        android:name="com.productmanager.MainApplication"
-16-->/Users/romanazimov/Desktop/GitHub/ProductManager/android/app/src/main/AndroidManifest.xml:7:7-38
-17        android:allowBackup="false"
-17-->/Users/romanazimov/Desktop/GitHub/ProductManager/android/app/src/main/AndroidManifest.xml:11:7-34
-18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-18-->[androidx.core:core:1.1.0] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/7f5aeccd48d5bc731df0adf1c8d7029e/core-1.1.0/AndroidManifest.xml:24:18-86
-19        android:debuggable="true"
-20        android:icon="@mipmap/ic_launcher"
-20-->/Users/romanazimov/Desktop/GitHub/ProductManager/android/app/src/main/AndroidManifest.xml:9:7-41
-21        android:label="@string/app_name"
-21-->/Users/romanazimov/Desktop/GitHub/ProductManager/android/app/src/main/AndroidManifest.xml:8:7-39
-22        android:roundIcon="@mipmap/ic_launcher_round"
-22-->/Users/romanazimov/Desktop/GitHub/ProductManager/android/app/src/main/AndroidManifest.xml:10:7-52
-23        android:testOnly="true"
-24        android:theme="@style/AppTheme"
-24-->/Users/romanazimov/Desktop/GitHub/ProductManager/android/app/src/main/AndroidManifest.xml:12:7-38
-25        android:usesCleartextTraffic="true" >
-25-->/Users/romanazimov/Desktop/GitHub/ProductManager/android/app/src/debug/AndroidManifest.xml:7:18-53
-26        <activity
-26-->/Users/romanazimov/Desktop/GitHub/ProductManager/android/app/src/main/AndroidManifest.xml:13:7-23:18
-27            android:name="com.productmanager.MainActivity"
-27-->/Users/romanazimov/Desktop/GitHub/ProductManager/android/app/src/main/AndroidManifest.xml:14:9-37
-28            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
-28-->/Users/romanazimov/Desktop/GitHub/ProductManager/android/app/src/main/AndroidManifest.xml:16:9-86
-29            android:label="@string/app_name"
-29-->/Users/romanazimov/Desktop/GitHub/ProductManager/android/app/src/main/AndroidManifest.xml:15:9-41
-30            android:launchMode="singleTask"
-30-->/Users/romanazimov/Desktop/GitHub/ProductManager/android/app/src/main/AndroidManifest.xml:17:9-40
-31            android:windowSoftInputMode="adjustResize" >
-31-->/Users/romanazimov/Desktop/GitHub/ProductManager/android/app/src/main/AndroidManifest.xml:18:9-51
-32            <intent-filter>
-32-->/Users/romanazimov/Desktop/GitHub/ProductManager/android/app/src/main/AndroidManifest.xml:19:9-22:25
-33                <action android:name="android.intent.action.MAIN" />
-33-->/Users/romanazimov/Desktop/GitHub/ProductManager/android/app/src/main/AndroidManifest.xml:20:13-65
-33-->/Users/romanazimov/Desktop/GitHub/ProductManager/android/app/src/main/AndroidManifest.xml:20:21-62
-34
-35                <category android:name="android.intent.category.LAUNCHER" />
-35-->/Users/romanazimov/Desktop/GitHub/ProductManager/android/app/src/main/AndroidManifest.xml:21:13-73
-35-->/Users/romanazimov/Desktop/GitHub/ProductManager/android/app/src/main/AndroidManifest.xml:21:23-70
-36            </intent-filter>
-37        </activity>
-38        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
-38-->/Users/romanazimov/Desktop/GitHub/ProductManager/android/app/src/main/AndroidManifest.xml:24:7-84
-38-->/Users/romanazimov/Desktop/GitHub/ProductManager/android/app/src/main/AndroidManifest.xml:24:17-81
-39    </application>
-40
-41</manifest>
+13-->[com.facebook.flipper:flipper:0.37.0] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/9fd80467112ad8d46623738a88cc056e/jetified-flipper-0.37.0/AndroidManifest.xml:16:5-76
+13-->[com.facebook.flipper:flipper:0.37.0] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/9fd80467112ad8d46623738a88cc056e/jetified-flipper-0.37.0/AndroidManifest.xml:16:22-73
+14    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+14-->[com.google.android.gms:play-services-measurement:17.4.3] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/23181c6cb450e07b83bac09f39a01d00/jetified-play-services-measurement-17.4.3/AndroidManifest.xml:24:5-79
+14-->[com.google.android.gms:play-services-measurement:17.4.3] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/23181c6cb450e07b83bac09f39a01d00/jetified-play-services-measurement-17.4.3/AndroidManifest.xml:24:22-76
+15    <uses-permission android:name="android.permission.WAKE_LOCK" />
+15-->[com.google.android.gms:play-services-measurement:17.4.3] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/23181c6cb450e07b83bac09f39a01d00/jetified-play-services-measurement-17.4.3/AndroidManifest.xml:25:5-68
+15-->[com.google.android.gms:play-services-measurement:17.4.3] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/23181c6cb450e07b83bac09f39a01d00/jetified-play-services-measurement-17.4.3/AndroidManifest.xml:25:22-65
+16    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+16-->[com.google.android.gms:play-services-measurement:17.4.3] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/23181c6cb450e07b83bac09f39a01d00/jetified-play-services-measurement-17.4.3/AndroidManifest.xml:26:5-110
+16-->[com.google.android.gms:play-services-measurement:17.4.3] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/23181c6cb450e07b83bac09f39a01d00/jetified-play-services-measurement-17.4.3/AndroidManifest.xml:26:22-107
+17    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+17-->[com.google.firebase:firebase-iid:20.1.5] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/57242648d6daf04e97689e65da6a30d0/jetified-firebase-iid-20.1.5/AndroidManifest.xml:26:5-82
+17-->[com.google.firebase:firebase-iid:20.1.5] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/57242648d6daf04e97689e65da6a30d0/jetified-firebase-iid-20.1.5/AndroidManifest.xml:26:22-79
+18
+19    <application
+19-->/Users/romanazimov/Desktop/GitHub/ProductManager/android/app/src/main/AndroidManifest.xml:6:5-25:19
+20        android:name="com.productmanager.MainApplication"
+20-->/Users/romanazimov/Desktop/GitHub/ProductManager/android/app/src/main/AndroidManifest.xml:7:7-38
+21        android:allowBackup="false"
+21-->/Users/romanazimov/Desktop/GitHub/ProductManager/android/app/src/main/AndroidManifest.xml:11:7-34
+22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+22-->[androidx.core:core:1.1.0] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/0f512e181ca87b528277c07a0d4a1870/core-1.1.0/AndroidManifest.xml:24:18-86
+23        android:debuggable="true"
+24        android:icon="@mipmap/ic_launcher"
+24-->/Users/romanazimov/Desktop/GitHub/ProductManager/android/app/src/main/AndroidManifest.xml:9:7-41
+25        android:label="@string/app_name"
+25-->/Users/romanazimov/Desktop/GitHub/ProductManager/android/app/src/main/AndroidManifest.xml:8:7-39
+26        android:roundIcon="@mipmap/ic_launcher_round"
+26-->/Users/romanazimov/Desktop/GitHub/ProductManager/android/app/src/main/AndroidManifest.xml:10:7-52
+27        android:testOnly="true"
+28        android:theme="@style/AppTheme"
+28-->/Users/romanazimov/Desktop/GitHub/ProductManager/android/app/src/main/AndroidManifest.xml:12:7-38
+29        android:usesCleartextTraffic="true" >
+29-->/Users/romanazimov/Desktop/GitHub/ProductManager/android/app/src/debug/AndroidManifest.xml:7:18-53
+30        <activity
+30-->/Users/romanazimov/Desktop/GitHub/ProductManager/android/app/src/main/AndroidManifest.xml:13:7-23:18
+31            android:name="com.productmanager.MainActivity"
+31-->/Users/romanazimov/Desktop/GitHub/ProductManager/android/app/src/main/AndroidManifest.xml:14:9-37
+32            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+32-->/Users/romanazimov/Desktop/GitHub/ProductManager/android/app/src/main/AndroidManifest.xml:16:9-86
+33            android:label="@string/app_name"
+33-->/Users/romanazimov/Desktop/GitHub/ProductManager/android/app/src/main/AndroidManifest.xml:15:9-41
+34            android:launchMode="singleTask"
+34-->/Users/romanazimov/Desktop/GitHub/ProductManager/android/app/src/main/AndroidManifest.xml:17:9-40
+35            android:windowSoftInputMode="adjustResize" >
+35-->/Users/romanazimov/Desktop/GitHub/ProductManager/android/app/src/main/AndroidManifest.xml:18:9-51
+36            <intent-filter>
+36-->/Users/romanazimov/Desktop/GitHub/ProductManager/android/app/src/main/AndroidManifest.xml:19:9-22:25
+37                <action android:name="android.intent.action.MAIN" />
+37-->/Users/romanazimov/Desktop/GitHub/ProductManager/android/app/src/main/AndroidManifest.xml:20:13-65
+37-->/Users/romanazimov/Desktop/GitHub/ProductManager/android/app/src/main/AndroidManifest.xml:20:21-62
+38
+39                <category android:name="android.intent.category.LAUNCHER" />
+39-->/Users/romanazimov/Desktop/GitHub/ProductManager/android/app/src/main/AndroidManifest.xml:21:13-73
+39-->/Users/romanazimov/Desktop/GitHub/ProductManager/android/app/src/main/AndroidManifest.xml:21:23-70
+40            </intent-filter>
+41        </activity>
+42        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+42-->/Users/romanazimov/Desktop/GitHub/ProductManager/android/app/src/main/AndroidManifest.xml:24:7-84
+42-->/Users/romanazimov/Desktop/GitHub/ProductManager/android/app/src/main/AndroidManifest.xml:24:17-81
+43
+44        <receiver
+44-->[com.google.android.gms:play-services-measurement:17.4.3] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/23181c6cb450e07b83bac09f39a01d00/jetified-play-services-measurement-17.4.3/AndroidManifest.xml:29:9-33:20
+45            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+45-->[com.google.android.gms:play-services-measurement:17.4.3] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/23181c6cb450e07b83bac09f39a01d00/jetified-play-services-measurement-17.4.3/AndroidManifest.xml:30:13-85
+46            android:enabled="true"
+46-->[com.google.android.gms:play-services-measurement:17.4.3] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/23181c6cb450e07b83bac09f39a01d00/jetified-play-services-measurement-17.4.3/AndroidManifest.xml:31:13-35
+47            android:exported="false" >
+47-->[com.google.android.gms:play-services-measurement:17.4.3] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/23181c6cb450e07b83bac09f39a01d00/jetified-play-services-measurement-17.4.3/AndroidManifest.xml:32:13-37
+48        </receiver>
+49
+50        <service
+50-->[com.google.android.gms:play-services-measurement:17.4.3] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/23181c6cb450e07b83bac09f39a01d00/jetified-play-services-measurement-17.4.3/AndroidManifest.xml:35:9-38:40
+51            android:name="com.google.android.gms.measurement.AppMeasurementService"
+51-->[com.google.android.gms:play-services-measurement:17.4.3] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/23181c6cb450e07b83bac09f39a01d00/jetified-play-services-measurement-17.4.3/AndroidManifest.xml:36:13-84
+52            android:enabled="true"
+52-->[com.google.android.gms:play-services-measurement:17.4.3] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/23181c6cb450e07b83bac09f39a01d00/jetified-play-services-measurement-17.4.3/AndroidManifest.xml:37:13-35
+53            android:exported="false" />
+53-->[com.google.android.gms:play-services-measurement:17.4.3] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/23181c6cb450e07b83bac09f39a01d00/jetified-play-services-measurement-17.4.3/AndroidManifest.xml:38:13-37
+54        <service
+54-->[com.google.android.gms:play-services-measurement:17.4.3] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/23181c6cb450e07b83bac09f39a01d00/jetified-play-services-measurement-17.4.3/AndroidManifest.xml:39:9-43:72
+55            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+55-->[com.google.android.gms:play-services-measurement:17.4.3] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/23181c6cb450e07b83bac09f39a01d00/jetified-play-services-measurement-17.4.3/AndroidManifest.xml:40:13-87
+56            android:enabled="true"
+56-->[com.google.android.gms:play-services-measurement:17.4.3] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/23181c6cb450e07b83bac09f39a01d00/jetified-play-services-measurement-17.4.3/AndroidManifest.xml:41:13-35
+57            android:exported="false"
+57-->[com.google.android.gms:play-services-measurement:17.4.3] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/23181c6cb450e07b83bac09f39a01d00/jetified-play-services-measurement-17.4.3/AndroidManifest.xml:42:13-37
+58            android:permission="android.permission.BIND_JOB_SERVICE" />
+58-->[com.google.android.gms:play-services-measurement:17.4.3] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/23181c6cb450e07b83bac09f39a01d00/jetified-play-services-measurement-17.4.3/AndroidManifest.xml:43:13-69
+59        <service
+59-->[com.google.android.gms:play-services-measurement-api:17.4.3] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/4af6b75e5028411a545c555c5d8045eb/jetified-play-services-measurement-api-17.4.3/AndroidManifest.xml:27:9-33:19
+60            android:name="com.google.firebase.components.ComponentDiscoveryService"
+60-->[com.google.android.gms:play-services-measurement-api:17.4.3] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/4af6b75e5028411a545c555c5d8045eb/jetified-play-services-measurement-api-17.4.3/AndroidManifest.xml:28:13-84
+61            android:directBootAware="true"
+61-->[com.google.firebase:firebase-common:19.3.0] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/9f24b895ae9f01d9ba34cb6fc53bf840/jetified-firebase-common-19.3.0/AndroidManifest.xml:34:13-43
+62            android:exported="false" >
+62-->[com.google.android.gms:play-services-measurement-api:17.4.3] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/4af6b75e5028411a545c555c5d8045eb/jetified-play-services-measurement-api-17.4.3/AndroidManifest.xml:29:13-37
+63            <meta-data
+63-->[com.google.android.gms:play-services-measurement-api:17.4.3] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/4af6b75e5028411a545c555c5d8045eb/jetified-play-services-measurement-api-17.4.3/AndroidManifest.xml:30:13-32:85
+64                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+64-->[com.google.android.gms:play-services-measurement-api:17.4.3] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/4af6b75e5028411a545c555c5d8045eb/jetified-play-services-measurement-api-17.4.3/AndroidManifest.xml:31:17-139
+65                android:value="com.google.firebase.components.ComponentRegistrar" />
+65-->[com.google.android.gms:play-services-measurement-api:17.4.3] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/4af6b75e5028411a545c555c5d8045eb/jetified-play-services-measurement-api-17.4.3/AndroidManifest.xml:32:17-82
+66            <meta-data
+66-->[com.google.firebase:firebase-iid:20.1.5] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/57242648d6daf04e97689e65da6a30d0/jetified-firebase-iid-20.1.5/AndroidManifest.xml:32:13-34:85
+67                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+67-->[com.google.firebase:firebase-iid:20.1.5] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/57242648d6daf04e97689e65da6a30d0/jetified-firebase-iid-20.1.5/AndroidManifest.xml:33:17-96
+68                android:value="com.google.firebase.components.ComponentRegistrar" />
+68-->[com.google.firebase:firebase-iid:20.1.5] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/57242648d6daf04e97689e65da6a30d0/jetified-firebase-iid-20.1.5/AndroidManifest.xml:34:17-82
+69            <meta-data
+69-->[com.google.firebase:firebase-installations:16.2.1] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/6f8f250bd85c0fd19d82d5785925376d/jetified-firebase-installations-16.2.1/AndroidManifest.xml:17:13-19:85
+70                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+70-->[com.google.firebase:firebase-installations:16.2.1] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/6f8f250bd85c0fd19d82d5785925376d/jetified-firebase-installations-16.2.1/AndroidManifest.xml:18:17-127
+71                android:value="com.google.firebase.components.ComponentRegistrar" />
+71-->[com.google.firebase:firebase-installations:16.2.1] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/6f8f250bd85c0fd19d82d5785925376d/jetified-firebase-installations-16.2.1/AndroidManifest.xml:19:17-82
+72        </service>
+73
+74        <receiver
+74-->[com.google.firebase:firebase-iid:20.1.5] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/57242648d6daf04e97689e65da6a30d0/jetified-firebase-iid-20.1.5/AndroidManifest.xml:37:9-44:20
+75            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+75-->[com.google.firebase:firebase-iid:20.1.5] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/57242648d6daf04e97689e65da6a30d0/jetified-firebase-iid-20.1.5/AndroidManifest.xml:38:13-78
+76            android:exported="true"
+76-->[com.google.firebase:firebase-iid:20.1.5] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/57242648d6daf04e97689e65da6a30d0/jetified-firebase-iid-20.1.5/AndroidManifest.xml:39:13-36
+77            android:permission="com.google.android.c2dm.permission.SEND" >
+77-->[com.google.firebase:firebase-iid:20.1.5] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/57242648d6daf04e97689e65da6a30d0/jetified-firebase-iid-20.1.5/AndroidManifest.xml:40:13-73
+78            <intent-filter>
+78-->[com.google.firebase:firebase-iid:20.1.5] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/57242648d6daf04e97689e65da6a30d0/jetified-firebase-iid-20.1.5/AndroidManifest.xml:41:13-43:29
+79                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+79-->[com.google.firebase:firebase-iid:20.1.5] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/57242648d6daf04e97689e65da6a30d0/jetified-firebase-iid-20.1.5/AndroidManifest.xml:42:17-81
+79-->[com.google.firebase:firebase-iid:20.1.5] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/57242648d6daf04e97689e65da6a30d0/jetified-firebase-iid-20.1.5/AndroidManifest.xml:42:25-78
+80            </intent-filter>
+81        </receiver>
+82
+83        <provider
+83-->[com.google.firebase:firebase-common:19.3.0] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/9f24b895ae9f01d9ba34cb6fc53bf840/jetified-firebase-common-19.3.0/AndroidManifest.xml:26:9-30:39
+84            android:name="com.google.firebase.provider.FirebaseInitProvider"
+84-->[com.google.firebase:firebase-common:19.3.0] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/9f24b895ae9f01d9ba34cb6fc53bf840/jetified-firebase-common-19.3.0/AndroidManifest.xml:27:13-77
+85            android:authorities="com.productmanager.firebaseinitprovider"
+85-->[com.google.firebase:firebase-common:19.3.0] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/9f24b895ae9f01d9ba34cb6fc53bf840/jetified-firebase-common-19.3.0/AndroidManifest.xml:28:13-72
+86            android:exported="false"
+86-->[com.google.firebase:firebase-common:19.3.0] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/9f24b895ae9f01d9ba34cb6fc53bf840/jetified-firebase-common-19.3.0/AndroidManifest.xml:29:13-37
+87            android:initOrder="100" />
+87-->[com.google.firebase:firebase-common:19.3.0] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/9f24b895ae9f01d9ba34cb6fc53bf840/jetified-firebase-common-19.3.0/AndroidManifest.xml:30:13-36
+88
+89        <activity
+89-->[com.google.android.gms:play-services-base:17.0.0] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/5c0f9e92253f30e5c92b5b9371cd46ad/jetified-play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
+90            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+90-->[com.google.android.gms:play-services-base:17.0.0] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/5c0f9e92253f30e5c92b5b9371cd46ad/jetified-play-services-base-17.0.0/AndroidManifest.xml:24:13-79
+91            android:exported="false"
+91-->[com.google.android.gms:play-services-base:17.0.0] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/5c0f9e92253f30e5c92b5b9371cd46ad/jetified-play-services-base-17.0.0/AndroidManifest.xml:25:13-37
+92            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+92-->[com.google.android.gms:play-services-base:17.0.0] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/5c0f9e92253f30e5c92b5b9371cd46ad/jetified-play-services-base-17.0.0/AndroidManifest.xml:26:13-72
+93
+94        <meta-data
+94-->[com.google.android.gms:play-services-basement:17.0.0] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/18d7fa3102df174b1d86e2b4bf7f382c/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+95            android:name="com.google.android.gms.version"
+95-->[com.google.android.gms:play-services-basement:17.0.0] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/18d7fa3102df174b1d86e2b4bf7f382c/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
+96            android:value="@integer/google_play_services_version" />
+96-->[com.google.android.gms:play-services-basement:17.0.0] /Users/romanazimov/.gradle/caches/transforms-2/files-2.1/18d7fa3102df174b1d86e2b4bf7f382c/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+97    </application>
+98
+99</manifest>

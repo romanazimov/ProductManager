@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "965985956581",
+    "firebase_url": "https://bucketly-db3b5.firebaseio.com",
+    "project_id": "bucketly-db3b5",
+    "storage_bucket": "bucketly-db3b5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:965985956581:android:bcbb642a2edb58b8215a0c",
+        "android_client_info": {
+          "package_name": "com.productmanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "965985956581-tanqknbhotakjn14gbjsm82odd7lrc8m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZo7SsxSr90Mhp2cTNmpjXv_wJFGnpzOM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "965985956581-tanqknbhotakjn14gbjsm82odd7lrc8m.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "965985956581-pj54fdjg8lnivo3tn0j3pvm70q4el23v.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.reactjs.native.example.ProductManager"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

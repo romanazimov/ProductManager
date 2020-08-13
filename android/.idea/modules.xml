@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ProductManager.iml" filepath="$PROJECT_DIR$/.idea/modules/ProductManager.iml" group="ProductManager" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="ProductManager/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/218037162/react-native-firebase_app.iml" filepath="$PROJECT_DIR$/.idea/modules/218037162/react-native-firebase_app.iml" group="ProductManager/react-native-firebase_app" />
     </modules>
   </component>
 </project>
