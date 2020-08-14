@@ -9,4 +9,4 @@ import Register from './src/screens/RegisterScreen';
 import App from './App';
 import Bucket from './src/screens/BucketScreen';
 
-AppRegistry.registerComponent('ProductManager', () => Bucket);
+AppRegistry.registerComponent('ProductManager', () => Login);
