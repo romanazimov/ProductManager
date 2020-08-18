@@ -20,9 +20,9 @@ const Login = () => (
         <View style={styles.row}>
             <Text style={styles.label}>Don’t have an account? </Text>
             <TouchableOpacity>
-          <Text style={styles.link}>Sign up</Text>
-        </TouchableOpacity>
-      </View>
+                <Text style={styles.link}>Sign up</Text>
+            </TouchableOpacity>
+        </View>
     </KeyboardAvoidingView>
 );
 
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     row: {
         flexDirection: 'row',
         marginTop: 4,
-      },
+    },
     link: {
         fontWeight: 'bold'
     }
