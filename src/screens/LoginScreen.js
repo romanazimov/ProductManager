@@ -4,6 +4,9 @@ import { Button } from '../components/Button'
 import { Input } from '../components/Input';
 import { Logo } from '../components/Logo';
 import auth from '@react-native-firebase/auth';
+import AppScreen from './../../App';
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
 
 
 
@@ -56,7 +59,7 @@ const Login = () => {
 };
     return(
     <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : null}
-                          style={styles.container}>
+                          style={styles.container2}>
         <Logo/>
         <View style={styles.space}/>
         <LoginApp/>
@@ -73,14 +76,19 @@ const Login = () => {
         <View style={styles.row}>
             <Text style={styles.label}>Don’t have an account? </Text>
             <TouchableOpacity>
-                <Text style={styles.link}>Sign up</Text>
-            </TouchableOpacity>
-        </View>
+          <Text style={styles.link}>Sign up</Text>
+        </TouchableOpacity>
+      </View>
     </KeyboardAvoidingView>
 )};
 
+
 const styles = StyleSheet.create({
-    container: {
+    
+  container: {
+    flex: 1
+  },
+    container2: {
         flex: 1,
         backgroundColor: '#818479',
         alignItems: 'center',
@@ -94,10 +102,10 @@ const styles = StyleSheet.create({
     row: {
         flexDirection: 'row',
         marginTop: 4,
-    },
+      },
     link: {
         fontWeight: 'bold'
     }
 });
 
-export default Login;
+export default Login
