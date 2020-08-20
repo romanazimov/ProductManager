@@ -1,12 +1,9 @@
-/**
- * @format
- */
-
-import React, { Component } from 'react';
-import {AppRegistry, StyleSheet, Text, View} from 'react-native';
-import Login from './src/screens/LoginScreen';
-import Register from './src/screens/RegisterScreen';
+import React from 'react';
+import {AppRegistry} from 'react-native';
 import App from './App';
+import Login from './src/screens/SignInScreen';
+import Register from './src/screens/RegisterScreen';
 import Bucket from './src/screens/BucketScreen';
+import Splash from './src/screens/SplashScreen';
 
-AppRegistry.registerComponent('ProductManager', () => Bucket);
+AppRegistry.registerComponent('ProductManager', () => App);

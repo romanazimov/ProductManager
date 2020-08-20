@@ -6,7 +6,7 @@ const IconButton = ({text, onPress}) => {
         <View style={styles.mainContainer}>
             <TouchableOpacity style={styles.container} onPress={onPress}>
                 <Image
-                    source={require('./images/Bucket.png')}
+                    source={require('../images/Bucket.png')}
                     style={styles.imageIcon}
                 />
                 <View style={styles.SeparatorLine} />

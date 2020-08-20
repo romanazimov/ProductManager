@@ -4,28 +4,22 @@ import { Button } from '../components/Button'
 import { Input } from '../components/Input';
 import { Logo } from '../components/Logo';
 
-const _onRegisterPressed = () => {
-    const emailError = 3
-}
-
 const Register = () => (
     <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : null}
                           style={styles.container}>
         <View style={styles.space}/>
-        {/* <View style={styles.boxView}> */}
         <Logo/>
 
-            <Input placeholder = ' Email Address: '/>
-            <Input placeholder = ' Password: '/>
-            <Input placeholder = ' Confirm Password: '/>
+        <Input placeholder = ' Email Address: '/>
+        <Input placeholder = ' Password: '/>
+        <Input placeholder = ' Confirm Password: '/>
 
-            <Button text="Register" onPress={_onRegisterPressed}/>
-            <View style={styles.row}>
-                <Text style={styles.label}>Have an account? </Text>
-                <TouchableOpacity>
-            <Text style={styles.link}>Sign in</Text>
+        <Button text="Register"/>
+        <View style={styles.row}>
+            <Text style={styles.label}>Have an account? </Text>
+            <TouchableOpacity>
+                <Text style={styles.link}>Sign in</Text>
             </TouchableOpacity>
-            {/* </View> */}
 
         </View>
     </KeyboardAvoidingView>
@@ -46,7 +40,7 @@ const styles = StyleSheet.create({
     row: {
         flexDirection: 'row',
         marginTop: 4,
-      },
+    },
     link: {
         fontWeight: 'bold'
     },
