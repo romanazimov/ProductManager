@@ -21,6 +21,10 @@ class Login extends Component {
             })
     }
 
+    onSignUpPress = () =>{
+        this.props.navigation.navigate('Register')
+    }
+
     onLoginSuccess = () =>{
         this.setState({
             error:'',
@@ -45,6 +49,7 @@ class Login extends Component {
                 <TextInput
                     style={styles.textInput}
                     placeholder=' Password: '
+                    secureTextEntry
                     value={this.state.password}
                     onChangeText={password=> this.setState({password})}
                 />
@@ -65,7 +70,11 @@ class Login extends Component {
                 <View style={styles.row}>
                     <Text style={styles.label}>Don’t have an account? </Text>
                     <TouchableOpacity>
-                        <Text style={styles.link}>Sign up</Text>
+                        <Text 
+                            style={styles.link} 
+                            onPress ={this.onSignUpPress}
+                            >Sign up
+                        </Text>
                     </TouchableOpacity>
                 </View>
             </View>

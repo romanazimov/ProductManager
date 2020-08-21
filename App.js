@@ -4,13 +4,16 @@ import SignIn from './src/screens/SignInScreen'
 import Bucket from './src/screens/BucketScreen'
 import Splash from './src/screens/SplashScreen'
 import firebase from 'firebase'
+import HomeNavigator from './src/routes/HomeStack'
+import LogNavigator from './src/routes/LoggedOutStack'
+
 
 class App extends Component {
 
     // Grab current state of auth
     state={
         loggedIn:null
-    }
+    };
 
     componentDidMount() {
         var firebaseConfig = {
@@ -37,11 +40,12 @@ class App extends Component {
             if (user){
                 this.setState({
                     loggedIn: true
-                })
+                });
             } else {
                 this.setState({
                     loggedIn: false
-                })
+                });
+
             }
         })
     }
@@ -49,14 +53,14 @@ class App extends Component {
     renderContent = () => {
         switch (this.state.loggedIn) {
             // If loggedIn visit Bucket DB
-            case true:
-                return <Bucket/>
+            case true: 
+                return <HomeNavigator/>
             // Loading bar (Not sure why I can't see it spinning)
             default:
                 return <Splash/>
             // else visit SignIn Screen
             case false:
-                return <SignIn/>
+                return <LogNavigator/>
 
         }
     }

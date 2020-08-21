@@ -5,6 +5,7 @@ const SplashScreen = () => {
     return (
         <View style={[styles.container, styles.horizontal]}>
             <ActivityIndicator size="large"/>
+            <Text>This is gay as fuck</Text>
         </View>
     );
 }
