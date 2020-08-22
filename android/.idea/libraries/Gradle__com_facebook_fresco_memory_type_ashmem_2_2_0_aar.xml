@@ -1,6 +1,7 @@
 <component name="libraryTable">
   <library name="Gradle: com.facebook.fresco:memory-type-ashmem:2.2.0@aar">
     <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c06cb65ae60ec26d8c9f724560ef958d/jetified-memory-type-ashmem-2.2.0/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c06cb65ae60ec26d8c9f724560ef958d/jetified-memory-type-ashmem-2.2.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c06cb65ae60ec26d8c9f724560ef958d/jetified-memory-type-ashmem-2.2.0/res" />
     </CLASSES>

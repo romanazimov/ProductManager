@@ -1,6 +1,7 @@
 <component name="libraryTable">
   <library name="Gradle: com.facebook.flipper:flipper-network-plugin:0.37.0@aar">
     <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/83473ac26d39797465887659e3aced80/jetified-flipper-network-plugin-0.37.0/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/83473ac26d39797465887659e3aced80/jetified-flipper-network-plugin-0.37.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/83473ac26d39797465887659e3aced80/jetified-flipper-network-plugin-0.37.0/res" />
     </CLASSES>

@@ -2,12 +2,11 @@ import React from 'react'
 import { StyleSheet, View, Text, ActivityIndicator } from 'react-native'
 
 const SplashScreen = () => {
-    return (
-        <View style={[styles.container, styles.horizontal]}>
-            <ActivityIndicator size="large"/>
-            <Text>This is gay as fuck</Text>
+    return(
+        <View style={styles.container}>
+            <ActivityIndicator size="large" color = "#e67e07"/>
         </View>
-    );
+    )
 }
 
     const styles = StyleSheet.create({
@@ -16,7 +15,6 @@ const SplashScreen = () => {
             justifyContent: "center"
         },
         horizontal: {
-            flexDirection: "row",
             justifyContent: "space-around",
             padding: 10
         }

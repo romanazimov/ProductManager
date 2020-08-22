@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { createAppContainer } from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
 
-import  SignInScreen from '../screens/SignInScreen';
+import SignInScreen from '../screens/SignInScreen';
 import RegistrationScreen from '../screens/RegisterScreen'
 
 export default class HomeStack extends React.Component {
