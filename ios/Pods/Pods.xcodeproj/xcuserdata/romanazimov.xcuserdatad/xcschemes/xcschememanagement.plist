@@ -184,12 +184,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>React-Core-AccessibilityResources.xcscheme</key>
+		<key>React-Core.common-AccessibilityResources.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>React-Core.xcscheme</key>
+		<key>React-Core.common-CoreModulesHeaders-AccessibilityResources.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>React-Core.common-CoreModulesHeaders.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>React-Core.common.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
