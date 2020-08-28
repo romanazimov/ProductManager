@@ -16,6 +16,7 @@ MERGED from [:react-native-gesture-handler] C:\Users\alecd\OneDrive\Documents\Pr
 MERGED from [:react-native-reanimated] C:\Users\alecd\OneDrive\Documents\ProductManager\node_modules\react-native-reanimated\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-safe-area-context] C:\Users\alecd\OneDrive\Documents\ProductManager\node_modules\react-native-safe-area-context\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-screens] C:\Users\alecd\OneDrive\Documents\ProductManager\node_modules\react-native-screens\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-vector-icons] C:\Users\alecd\OneDrive\Documents\ProductManager\node_modules\react-native-vector-icons\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [com.facebook.react:react-native:0.63.2] C:\Users\alecd\.gradle\caches\transforms-2\files-2.1\15ca86802ff56671778dba97db2515a2\jetified-react-native-0.63.2\AndroidManifest.xml:2:1-13:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\alecd\.gradle\caches\transforms-2\files-2.1\67905c35cad6b32486901f08d33d2aee\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [org.webkit:android-jsc:r245459] C:\Users\alecd\.gradle\caches\transforms-2\files-2.1\41822ddfc5abac67fa9eb62f1eb56f64\jetified-android-jsc-r245459\AndroidManifest.xml:2:1-11:12
@@ -262,6 +263,8 @@ MERGED from [:react-native-safe-area-context] C:\Users\alecd\OneDrive\Documents\
 MERGED from [:react-native-safe-area-context] C:\Users\alecd\OneDrive\Documents\ProductManager\node_modules\react-native-safe-area-context\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-screens] C:\Users\alecd\OneDrive\Documents\ProductManager\node_modules\react-native-screens\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-screens] C:\Users\alecd\OneDrive\Documents\ProductManager\node_modules\react-native-screens\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-vector-icons] C:\Users\alecd\OneDrive\Documents\ProductManager\node_modules\react-native-vector-icons\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-vector-icons] C:\Users\alecd\OneDrive\Documents\ProductManager\node_modules\react-native-vector-icons\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.63.2] C:\Users\alecd\.gradle\caches\transforms-2\files-2.1\15ca86802ff56671778dba97db2515a2\jetified-react-native-0.63.2\AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.63.2] C:\Users\alecd\.gradle\caches\transforms-2\files-2.1\15ca86802ff56671778dba97db2515a2\jetified-react-native-0.63.2\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\alecd\.gradle\caches\transforms-2\files-2.1\67905c35cad6b32486901f08d33d2aee\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
