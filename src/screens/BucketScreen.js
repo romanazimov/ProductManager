@@ -3,21 +3,40 @@ import { StyleSheet, View, Text, TouchableOpacity, Button} from 'react-native';
 import { IconButton } from '../components/IconButton';
 import firebase from "firebase";
 import { createDrawerNavigator } from '@react-navigation/drawer';
+import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import { useNavigation } from '@react-navigation/native';
 import { DrawerContent } from '../screens/DrawerContent'
-import SignInScreen from './SignInScreen'
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const Drawer = createDrawerNavigator();
+const Stack = createStackNavigator();
+
+
+// Not currently working
+const drawerButton = () => {
+    return(
+        <Stack.Navigator screenOptions={{
+            headerLeft: () => (
+                <Icon.Button
+                    name="ios-menu"
+                    size={25}
+                    backgroundColor="#009387"
+                    onPress={() => navigation.openDrawer()
+                    }>
+                </Icon.Button>
+            )
+        }}
+
+        />
+    )
+}
 
 const Main = () => {
-    const navigation = useNavigation();
+    //const navigation = useNavigation();
     return (
         <View style={styles.container}>
-            <Text>Hello</Text>
-            <TouchableOpacity onPress={() => firebase.auth().signOut()}>
-                <Text style={{color: '#FFF', paddingBottom: 40, fontSize: 20}} >Logout</Text>
-            </TouchableOpacity>
+            <Text style={{fontSize:30}}>Bucket Data</Text>
         </View>
     )
 }

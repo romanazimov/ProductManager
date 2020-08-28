@@ -2,28 +2,29 @@ import React from 'react';
 import { View, StyleSheet } from "react-native";
 import { DrawerContentScrollView, DrawerItem } from '@react-navigation/drawer';
 import { Drawer, Text } from 'react-native-paper';
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons"
+import Icon from "react-native-vector-icons/MaterialCommunityIcons"
+import firebase from "firebase";
 
 
 export function DrawerContent(props){
     return(
-        <View style={{flex:1}}>
+        <View style={{flex:1, alignItems:'center'}}>
             <DrawerContentScrollView {...props}>
                 <View>
-                    <Text>Buckets</Text>
+                    <Text>Bucket Links (dynamically updated)</Text>
                 </View>
             </DrawerContentScrollView>
             <Drawer.Section style={styles.bottomDrawerSection}>
                 <DrawerItem
                     icon={({color, size}) => (
-                        <MaterialCommunityIcons
+                        <Icon
                             name="exit-to-app"
                             color={color}
                             size={size}
                             />
                         )}
                         label="Sign Out"
-                        onPress={() => {}}
+                        onPress={() => {firebase.auth().signOut()}}
                     />
             </Drawer.Section>
         </View>
