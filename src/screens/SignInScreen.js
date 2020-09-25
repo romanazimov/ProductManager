@@ -8,7 +8,7 @@ class Login extends Component {
         email: '',
         password: '',
         error: '',
-        loading: false
+        loading: false,
     }
 
     onLoginButtonPress = () =>{
@@ -70,8 +70,8 @@ class Login extends Component {
                 <View style={styles.row}>
                     <Text style={styles.label}>Don’t have an account? </Text>
                     <TouchableOpacity>
-                        <Text 
-                            style={styles.link} 
+                        <Text
+                            style={styles.link}
                             onPress ={this.onSignUpPress}
                             >Sign up
                         </Text>

@@ -32,9 +32,17 @@ class Register extends Component {
                 .auth()
                 .createUserWithEmailAndPassword(this.state.email,this.state.password)
                 .then((res) => {
-                    res.user.updateProfile({
-                        displayName: this.state.dsiplayName
-                    })
+                    const userID = firebase.auth().currentUser.uid
+                    console.log("User uid is: ", userID);
+                    firebase.firestore().collection('users').doc(userID).set({
+                        name: "hello"
+                    });
+
+                    // Not sure what this does
+                    // res.user.updateProfile({
+                    //     displayName: this.state.displayName
+                    // })
+
                     console.log('User registered successfully!')
                 })
                 .catch(error => this.setState({errorMessage: error.message}), Alert.alert('Email already exists') )
@@ -56,23 +64,23 @@ class Register extends Component {
 
     render(){
         return(
-            
+
         <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : null}
             style={styles.container}>
         <View style={styles.space}/>
         <Logo/>
 
-        <Input 
+        <Input
                 placeholder = ' Email Address: '
                 value ={this.state.email}
                 onChangeText={email =>this.setState({email})}
             />
-        <Input 
+        <Input
                 placeholder = ' Password: '
                 value ={this.state.password}
                 onChangeText={password =>this.setState({password})}
             />
-        <Input 
+        <Input
                 placeholder = ' Confirm Password: '
                 value ={this.state.confirmPassword}
                 onChangeText={confirmPassword => this.setState({confirmPassword})}

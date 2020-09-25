@@ -5,15 +5,24 @@ import { Drawer, Text } from 'react-native-paper';
 import Icon from "react-native-vector-icons/MaterialCommunityIcons"
 import firebase from "firebase";
 
-
 export function DrawerContent(props){
     return(
-        <View style={{flex:1, alignItems:'center'}}>
-            <DrawerContentScrollView {...props}>
-                <View>
-                    <Text>Bucket Links (dynamically updated)</Text>
-                </View>
-            </DrawerContentScrollView>
+        <View style={styles.container}>
+            {/*<DrawerContentScrollView {...props}>*/}
+            {/*    <View style={{marginTop: 0}}>*/}
+            {/*        <Text style={{fontSize: 30, fontWeight: "600"}}>User Hub</Text>*/}
+            {/*    </View>*/}
+            {/*</DrawerContentScrollView>*/}
+
+            <View style>
+                <Text style={{fontSize: 30, fontWeight: "600"}}>User Hub</Text>
+                <Text>User: {firebase.auth().currentUser.uid}</Text>
+            </View>
+
+            <View style={styles.container}>
+            </View>
+
+            {/*Sign out user button*/}
             <Drawer.Section style={styles.bottomDrawerSection}>
                 <DrawerItem
                     icon={({color, size}) => (
@@ -21,30 +30,20 @@ export function DrawerContent(props){
                             name="exit-to-app"
                             color={color}
                             size={size}
-                            />
-                        )}
-                        label="Sign Out"
-                        onPress={() => {firebase.auth().signOut()}}
-                    />
+                        />
+                    )}
+                    label="Sign Out"
+                    onPress={() => {firebase.auth().signOut()}}
+                />
             </Drawer.Section>
         </View>
     )
 }
 
 const styles = StyleSheet.create({
-    drawerContent: {
+    container: {
         flex: 1,
-    },
-
-    title: {
-        fontSize: 16,
-        marginTop: 3,
-        fontWeight: 'bold',
-    },
-
-    bottomDrawerSection: {
-        marginBottom: 15,
-        borderTopColor: '#f4f4f4',
-        borderTopWidth: 1
-    },
+        alignItems: "center",
+        justifyContent: "center"
+    }
 })

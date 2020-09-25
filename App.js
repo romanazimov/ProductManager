@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet} from 'react-native';
 import SignIn from './src/screens/SignInScreen'
-import Bucket from './src/screens/BucketScreen'
+import Bucket from './src/screens/DrawerNav'
 import Splash from './src/screens/SplashScreen'
 import firebase from 'firebase'
 import HomeNavigator from './src/routes/HomeStack'
 import LogNavigator from './src/routes/LoggedOutStack'
+import firestore from '@react-native-firebase/firestore'
 
 
 class App extends Component {
 
     // Grab current state of auth
     state={
-        loggedIn:null
+        loggedIn:null,
+        user: {},
     };
 
     componentDidMount() {
@@ -39,7 +41,7 @@ class App extends Component {
         firebase.auth().onAuthStateChanged(user => {
             if (user){
                 this.setState({
-                    loggedIn: true
+                    loggedIn: true, user
                 });
             } else {
                 this.setState({
@@ -53,7 +55,7 @@ class App extends Component {
     renderContent = () => {
         switch (this.state.loggedIn) {
             // If loggedIn visit Bucket DB
-            case true: 
+            case true:
                 return <HomeNavigator/>
             // Loading bar (Not sure why I can't see it spinning)
             default:
