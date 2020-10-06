@@ -2,26 +2,31 @@ import React, { Component } from 'react';
 import {View, Text, StyleSheet, FlatList, TouchableOpacity, Modal} from 'react-native';
 import firebase from "firebase";
 import tempData from "../data/tempData";
-import BucketList from "../data/BucketList";
+import BucketList from "./BucketList";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import AddBucketModal from "./AddBucketModal";
 
-export default class BucketData extends Component {
+export default class MainPage extends Component {
     state = {
-        addVisibility: false
+        isVisible: false
     }
 
     toggleAddBucketModal() {
-        this.setState({ addVisibility: !this.state.addVisibility})
+        this.setState({ isVisible: !this.state.isVisible})
+    }
+
+    renderList = list => {
+        return <BucketList list={list}/>
     }
 
     render() {
+        //const invCount = list.info.filter()
         return (
             <View style={styles.container}>
                 {/*UI for loading into Bucket and out of it*/}
                 <Modal
                     animationType={"slide"}
-                    visible={this.state.addVisibility}
+                    visible={this.state.isVisible}
                     onRequestClose={() => this.toggleAddBucketModal()}
                 >
                     <AddBucketModal closeModal={() => this.toggleAddBucketModal()}/>
@@ -48,9 +53,7 @@ export default class BucketData extends Component {
                     style={{paddingVertical: 30}}
                     data={tempData}
                     keyExtractor={item => item.name}
-                    renderItem={({ item }) => (
-                        <BucketList list={item}/>
-                    )}
+                    renderItem={({ item }) => this.renderList(item)}
                 />
 
                 {/* Add new bucket button */}
@@ -66,7 +69,7 @@ export default class BucketData extends Component {
     }
 }
 
-// export default class BucketData extends Component {
+// export default class MainPage extends Component {
 //     render() {
 //         return (
 //             <View style={styles.container}>
@@ -85,9 +88,10 @@ const styles = StyleSheet.create({
     },
     divider: {
         backgroundColor: "#18b8c9",
-        height: .9,
+        height: .5,
         flex: 1,
-        alignSelf: "center"
+        alignSelf: "center",
+        marginHorizontal: 50
     },
     title: {
         fontSize: 28,
@@ -103,8 +107,8 @@ const styles = StyleSheet.create({
     },
     addList: {
         borderWidth: 1,
-        borderRadius: 4,
-        padding: 10,
+        borderRadius: 30,
+        padding: 13,
         alignItems: "center",
         justifyContent: "center",
         borderColor: "#18b8c9",

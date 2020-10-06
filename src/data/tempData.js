@@ -1,4 +1,5 @@
-// Temporary Data
+// Test import, maybe add icons next to the Bucket name?
+import AntDesign from "react-native-vector-icons/AntDesign";
 
 export default tempData = [
     {
@@ -7,12 +8,24 @@ export default tempData = [
         info: [
             {
                 name: "Camshaft Sprocket",
-                condition: "Good",
+                quantity: 2,
                 location: "2ABD"
             },
             {
                 name: "Crankshaft",
-                condition: "Bad",
+                quantity: 4,
+                location: "3AGC"
+            }
+            ,
+            {
+                name: "Piston",
+                quantity: 2,
+                location: "3AGC"
+            }
+            ,
+            {
+                name: "Door",
+                quantity: 1,
                 location: "3AGC"
             }
         ]
@@ -23,12 +36,12 @@ export default tempData = [
         info: [
             {
                 name: "Piston",
-                condition: "Excellent",
+                quantity: 1,
                 location: "2ABD"
             },
             {
                 name: "Door Handle",
-                condition: "Bad",
+                quantity: 1,
                 location: "3AGC"
             }
         ]
@@ -40,12 +53,22 @@ export default tempData = [
         info: [
             {
                 name: "Head",
-                condition: "Excellent",
+                quantity: 4,
                 location: "2ABD"
             },
             {
                 name: "Connecting Rod",
-                condition: "Bad",
+                quantity: 9,
+                location: "3AGC"
+            },
+            {
+                name: "AirBag",
+                quantity: 3,
+                location: "3AGC"
+            },
+            {
+                name: "Fog Light",
+                quantity: 1,
                 location: "3AGC"
             }
         ]
