@@ -23,12 +23,9 @@ export default class AddBucketModal extends Component {
 
     createBucket = () => {
         const {name, color} = this.state
-         tempData.push({
-             name,
-             color,
-             info: []
-         })
+        const bucket = { name, color }
 
+        this.props.addBucket(bucket)
         this.setState({ name: ""})
         this.props.closeModal()
     }

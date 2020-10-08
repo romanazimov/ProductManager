@@ -6,9 +6,6 @@ import ExitButton from "../components/ExitButton";
 
 export default class BucketModal extends Component {
     state = {
-        name: this.props.list.name,
-        color: this.props.list.color,
-        info: this.props.list.info,
         visible: false
     }
 
@@ -34,6 +31,7 @@ export default class BucketModal extends Component {
     }
 
     render() {
+        const list = this.props.list
         return (
             // <SafeAreaView style={styles.container, {height: '80%', width: '50%'}}>
             <SafeAreaView style={styles.container}>
@@ -49,7 +47,7 @@ export default class BucketModal extends Component {
                 {/* Display Header/ Name of Bucket*/}
                 <View style={[styles.section, styles.header]}>
                     <View>
-                        <Text style={styles.title}>{this.state.name}</Text>
+                        <Text style={styles.title}>{list.name}</Text>
                     </View>
                 </View>
 
@@ -69,7 +67,7 @@ export default class BucketModal extends Component {
                 {/* Collection Container */}
                 <View style={[styles.section, {flex: 1}]}>
                     <FlatList
-                        data={this.state.info}
+                        data={list.info}
                         renderItem={({item}) => this.renderInfo(item)}
                         keyExtractor={item => item.name}
                         //contentContainerStyle={styles.collectionContainer}
@@ -78,7 +76,7 @@ export default class BucketModal extends Component {
 
                 <View>
                     {/* Small Modal to open and add to collection*/}
-                    <KeyboardAvoidingView>
+                    <View>
                         <Modal
                             transparent={true}
                             animationType={"fade"}
@@ -86,11 +84,11 @@ export default class BucketModal extends Component {
                         >
                             <View style={{backgroundColor: '#000000cc', blurType: "dark",flex: 1}}>
                                 <View style={styles.testModal}>
-                                    <AddItemModal/>
+                                    <AddItemModal closeModal={() => this.toggleModal()}/>
                                 </View>
                             </View>
                         </Modal>
-                    </KeyboardAvoidingView>
+                    </View>
 
                     {/* Button to open modal*/}
                     <View style={{ marginBottom: 40}}>

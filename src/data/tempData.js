@@ -3,6 +3,7 @@ import AntDesign from "react-native-vector-icons/AntDesign";
 
 export default tempData = [
     {
+        id: 1,
         name: "First Bucket",
         color: "#24A6D9",
         info: [
@@ -31,6 +32,7 @@ export default tempData = [
         ]
     },
     {
+        id: 2,
         name: "Second Bucket",
         color: "#61c6c9",
         info: [
@@ -48,6 +50,7 @@ export default tempData = [
     }
     ,
     {
+        id: 3,
         name: "Third Bucket",
         color: "#60db7f",
         info: [

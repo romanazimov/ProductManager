@@ -1,26 +1,31 @@
 import React, { Component } from 'react';
-import {
-    View,
-    Text,
-    StyleSheet,
-    Modal,
-    TouchableOpacity,
-    TextInput,
-    KeyboardAvoidingView,
-    SafeAreaView
-} from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, TextInput, KeyboardAvoidingView} from 'react-native';
 import AntDesign from "react-native-vector-icons/AntDesign";
 
 // create a component
 export default class AddItemModal extends Component {
+    state = {
+        newItemName: "",
+        newItemQuantity: "",
+        newItemLocation: "",
+    }
+
+
+    addItem = () => {
+        let list = this.props.bucket
+        list.info.push({ name: this.state.newItemName, quantity: this.state.newItemQuantity, condition: this.state.newItemLocation})
+
+        this.props.updateBucket(list);
+        this.setState({ newItemName: "", newItemQuantity: "", newItemLocation: "" })
+    }
 
     render() {
         return (
-            <KeyboardAvoidingView style={styles.container}>
+            <KeyboardAvoidingView style={styles.container} behavior="padding">
                 {/* Get out of BucketModal */}
                 <TouchableOpacity
                     style={{position: "absolute", top: 10, right: 10}}
-                    onPress={this.props.toggleModal}
+                    onPress={this.props.closeModal}
                 >
                     <AntDesign name={"close"} size={30}/>
                 </TouchableOpacity>
@@ -29,27 +34,31 @@ export default class AddItemModal extends Component {
                     <TextInput
                         style={styles.inputBox}
                         placeholder={"Item Name"}
-                        onChangeText={text => this.setState({name: test})}
+                        onChangeText={nameText => this.setState({newItemName: nameText})}
+                        value={this.state.newItemName}
                     />
                 </View>
                 <View style={{alignSelf: "stretch", marginHorizontal: 32}}>
                     <TextInput
                         style={styles.inputBox}
                         placeholder={"Quantity"}
-                        onChangeText={text => this.setState({quantity: text})}
+                        onChangeText={quantityText => this.setState({newItemQuantity: quantityText})}
+                        value={this.state.newItemQuantity}
                     />
                 </View>
                 <View style={{alignSelf: "stretch", marginHorizontal: 32}}>
                     <TextInput
                         style={styles.inputBox}
                         placeholder={"Location"}
-                        onChangeText={text => this.setState({location: text})}
+                        onChangeText={locationText => this.setState({newItemLocation: locationText})}
+                        value={this.state.newItemLocation}
                     />
                 </View>
 
                 <TouchableOpacity
                     style={{flexDirection: "row", position: 'absolute', bottom: 5, justifyContent: "space-between"}}
-                    onPress={() => this.props.closeModal}>
+                    onPress={() => this.addItem()}
+                >
                     <View style={styles.box}>
                         <Text>Submit</Text>
                     </View>

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Modal } from 'react-native';
 import BucketModal from "./BucketModal";
 
-export default class BucketList extends Component {
+export default class BucketCollection extends Component {
     state = {
         isVisible: false
     }
@@ -23,7 +23,11 @@ export default class BucketList extends Component {
                     visible={this.state.isVisible}
                     onRequestClose={() => this.toggleAddBucketModal()}
                 >
-                    <BucketModal list={list} closeModal={() => this.toggleAddBucketModal()}/>
+                    <BucketModal
+                        list={list}
+                        closeModal={() => this.toggleAddBucketModal()}
+                        updateBucket={this.props.updateBucket}
+                    />
                 </Modal>
                 <TouchableOpacity
                     style={[styles.listContainer, {backgroundColor: list.color}]}

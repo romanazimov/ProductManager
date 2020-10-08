@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import {View, Text, StyleSheet, FlatList, TouchableOpacity, Modal} from 'react-native';
 import firebase from "firebase";
 import tempData from "../data/tempData";
-import BucketList from "./BucketList";
+import BucketCollection from "./BucketCollection";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import AddBucketModal from "./AddBucketModal";
 
 export default class MainPage extends Component {
     state = {
-        isVisible: false
+        isVisible: false,
+        buckets: tempData
     }
 
     toggleAddBucketModal() {
@@ -16,7 +17,19 @@ export default class MainPage extends Component {
     }
 
     renderList = list => {
-        return <BucketList list={list}/>
+        return <BucketCollection list={list} updateBucket={this.updateBucket}/>
+    }
+
+    addBucket = list => {
+        this.setState({ buckets: [...this.state.buckets, { ...list, id: this.state.buckets.length + 1, info: [] }] })
+    }
+
+    updateBucket = list => {
+        this.setState({
+            buckets: this.state.buckets.map(item => {
+                return item.id === list.id ? list : item
+            })
+        })
     }
 
     render() {
@@ -29,7 +42,7 @@ export default class MainPage extends Component {
                     visible={this.state.isVisible}
                     onRequestClose={() => this.toggleAddBucketModal()}
                 >
-                    <AddBucketModal closeModal={() => this.toggleAddBucketModal()}/>
+                    <AddBucketModal closeModal={() => this.toggleAddBucketModal()} addBucket={this.addBucket}/>
                 </Modal>
 
                 {/*Sending props into Drawer*/}
@@ -51,9 +64,10 @@ export default class MainPage extends Component {
                 {/*List Data*/}
                 <FlatList
                     style={{paddingVertical: 30}}
-                    data={tempData}
+                    data={this.state.buckets}
                     keyExtractor={item => item.name}
                     renderItem={({ item }) => this.renderList(item)}
+                    // keyboardShouldPersistTaps={"always"}
                 />
 
                 {/* Add new bucket button */}
