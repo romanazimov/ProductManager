@@ -20,11 +20,15 @@ export default class AddItemModal extends Component {
     }
 
 
-    addItem = () => {
+    createItem = () => {
         const {newItemName, newItemQuantity, newItemLocation} = this.state
-        const item = { newItemName, newItemQuantity, newItemLocation}
+        const item = {newItemName, newItemQuantity, newItemLocation}
 
-        this.props.addCurrentItem(item)
+        // this.props.addCounter()
+        // this.props.closeModal()
+
+        this.props.addItem(item)
+        this.setState({ newItemName: "", newItemQuantity: "", newItemLocation: ""})
         this.props.closeModal()
 
     }
@@ -67,7 +71,7 @@ export default class AddItemModal extends Component {
 
                 <TouchableOpacity
                     style={{flexDirection: "row", position: 'absolute', bottom: 5, justifyContent: "space-between"}}
-                    onPress={() => this.addItem()}
+                    onPress={() => this.createItem()}
                 >
                     <View style={styles.box}>
                         <Text>Submit</Text>

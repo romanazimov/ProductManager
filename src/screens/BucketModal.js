@@ -10,6 +10,7 @@ export default class BucketModal extends Component {
         name: "",
         quantity: "",
         location: "",
+        counter: 0
     }
 
     // Per item container
@@ -29,8 +30,9 @@ export default class BucketModal extends Component {
         )
     }
 
-    addCurrentItem = item => {
-        this.setState({name: item.name, quantity: item.quantity, location: item.location})
+    addItem = item => {
+        // this.setState({name: item.name, quantity: item.quantity, location: item.location})
+        this.setState({ name: item })
     }
 
     toggleModal() {
@@ -91,7 +93,7 @@ export default class BucketModal extends Component {
                         >
                             <View style={{backgroundColor: '#000000cc', blurType: "dark",flex: 1}}>
                                 <View style={styles.testModal}>
-                                    <AddItemModal closeModal={() => this.toggleModal()}/>
+                                    <AddItemModal closeModal={() => this.toggleModal()} addCounter={({data}) => this.addItem(data)}/>
                                 </View>
                             </View>
                         </Modal>
@@ -99,11 +101,11 @@ export default class BucketModal extends Component {
 
                     {/* Button to open modal*/}
                     <View style={{ marginBottom: 40}}>
-                        <TouchableOpacity style={styles.add} onPress={() => this.toggleModal()} addCurrentItem={this.addCurrentItem}>
+                        <TouchableOpacity style={styles.add} onPress={() => this.toggleModal()}>
                             <AntDesign name={"plus"} size={30}/>
                         </TouchableOpacity>
 
-                        <Text style={styles.addText}>Add Item</Text>
+                        <Text style={styles.addText}>{this.state.name}</Text>
                     </View>
                 </View>
             </SafeAreaView>
