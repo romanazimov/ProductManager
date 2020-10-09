@@ -6,7 +6,10 @@ import ExitButton from "../components/ExitButton";
 
 export default class BucketModal extends Component {
     state = {
-        visible: false
+        visible: false,
+        name: "",
+        quantity: "",
+        location: "",
     }
 
     // Per item container
@@ -24,6 +27,10 @@ export default class BucketModal extends Component {
                 </View>
             </View>
         )
+    }
+
+    addCurrentItem = item => {
+        this.setState({name: item.name, quantity: item.quantity, location: item.location})
     }
 
     toggleModal() {
@@ -92,11 +99,11 @@ export default class BucketModal extends Component {
 
                     {/* Button to open modal*/}
                     <View style={{ marginBottom: 40}}>
-                        <TouchableOpacity style={styles.add} onPress={() => this.toggleModal()}>
+                        <TouchableOpacity style={styles.add} onPress={() => this.toggleModal()} addCurrentItem={this.addCurrentItem}>
                             <AntDesign name={"plus"} size={30}/>
                         </TouchableOpacity>
 
-                        <Text style={styles.addText}>Add New</Text>
+                        <Text style={styles.addText}>Add Item</Text>
                     </View>
                 </View>
             </SafeAreaView>

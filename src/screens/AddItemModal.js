@@ -1,5 +1,14 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, TextInput, KeyboardAvoidingView} from 'react-native';
+import {
+    View,
+    Text,
+    StyleSheet,
+    TouchableOpacity,
+    TextInput,
+    KeyboardAvoidingView,
+    FlatList,
+    SafeAreaView
+} from 'react-native';
 import AntDesign from "react-native-vector-icons/AntDesign";
 
 // create a component
@@ -12,11 +21,12 @@ export default class AddItemModal extends Component {
 
 
     addItem = () => {
-        let list = this.props.bucket
-        list.info.push({ name: this.state.newItemName, quantity: this.state.newItemQuantity, condition: this.state.newItemLocation})
+        const {newItemName, newItemQuantity, newItemLocation} = this.state
+        const item = { newItemName, newItemQuantity, newItemLocation}
 
-        this.props.updateBucket(list);
-        this.setState({ newItemName: "", newItemQuantity: "", newItemLocation: "" })
+        this.props.addCurrentItem(item)
+        this.props.closeModal()
+
     }
 
     render() {
