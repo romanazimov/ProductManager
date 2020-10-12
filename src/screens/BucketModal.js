@@ -32,7 +32,14 @@ export default class BucketModal extends Component {
 
     addItem = item => {
         // this.setState({name: item.name, quantity: item.quantity, location: item.location})
-        this.setState({ name: item })
+        this.setState({
+            name: item
+        })
+    }
+
+    onInputChanged = (changedText) => {
+        this.state.name = changedText
+        console.log('This is the changed text: ', this.state.name);
     }
 
     toggleModal() {
@@ -63,7 +70,7 @@ export default class BucketModal extends Component {
                 {/* Column Names*/}
                 <View style={{flexDirection: "row"}}>
                     <View style={styles.boxData}>
-                        <Text style={styles.columnNameText}>Name</Text>
+                        <Text style={styles.columnNameText}>{this.state.name}</Text>
                     </View>
                     <View style={styles.boxData}>
                         <Text style={styles.columnNameText}>Quantity</Text>
@@ -93,7 +100,7 @@ export default class BucketModal extends Component {
                         >
                             <View style={{backgroundColor: '#000000cc', blurType: "dark",flex: 1}}>
                                 <View style={styles.testModal}>
-                                    <AddItemModal closeModal={() => this.toggleModal()} addCounter={({data}) => this.addItem(data)}/>
+                                    <AddItemModal closeModal={() => this.toggleModal()} onInputChanged={this.onInputChanged}/>
                                 </View>
                             </View>
                         </Modal>
