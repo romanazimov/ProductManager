@@ -20,20 +20,19 @@ export default class AddItemModal extends Component {
     }
 
 
-    createItem () {
-        // const {newItemName, newItemQuantity, newItemLocation} = this.state
-        // const item = {newItemName, newItemQuantity, newItemLocation}
-
+    createItem = (name, quantity, location) => {
         const myObj = {
-            name: this.state.newItemName,
-            quantity: this.state.newItemQuantity,
-            location: this.state.newItemLocation
+            newName: name,
+            newQuantity: quantity,
+            newLocation: location
         }
-        // this.props.addCounter()
-        // this.props.closeModal()
 
         this.props.addItem(myObj)
-        this.setState({ newItemName: "", newItemQuantity: "", newItemLocation: ""})
+
+        this.state.newItemName = ""
+        this.state.newItemQuantity = ""
+        this.state.newItemLocation = ""
+        // console.log(this.state.newItemLocation)
         this.props.closeModal()
 
     }
@@ -76,10 +75,10 @@ export default class AddItemModal extends Component {
 
                 <TouchableOpacity
                     style={{flexDirection: "row", position: 'absolute', bottom: 5, justifyContent: "space-between"}}
-                    onPress={() => this.props.onInputChanged(this.state.newItemName)}
+                    onPress={() => this.createItem(this.state.newItemName, this.state.newItemQuantity, this.state.newItemLocation)}
                 >
                     <View style={styles.box}>
-                        <Text>{this.state.newItemName}</Text>
+                        <Text>Submit</Text>
                     </View>
                 </TouchableOpacity>
 

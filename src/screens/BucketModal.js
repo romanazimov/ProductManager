@@ -30,16 +30,14 @@ export default class BucketModal extends Component {
         )
     }
 
-    addItem = item => {
-        // this.setState({name: item.name, quantity: item.quantity, location: item.location})
-        this.setState({
-            name: item
-        })
-    }
+    addItem = (item) => {
+        this.state.name = item.newName
+        this.state.quantity = item.newQuantity
+        this.state.location = item.newLocation
 
-    onInputChanged = (changedText) => {
-        this.state.name = changedText
         console.log('This is the changed text: ', this.state.name);
+        console.log('This is the changed text: ', this.state.quantity);
+        console.log('This is the changed text: ', this.state.location);
     }
 
     toggleModal() {
@@ -70,7 +68,7 @@ export default class BucketModal extends Component {
                 {/* Column Names*/}
                 <View style={{flexDirection: "row"}}>
                     <View style={styles.boxData}>
-                        <Text style={styles.columnNameText}>{this.state.name}</Text>
+                        <Text style={styles.columnNameText}>Name</Text>
                     </View>
                     <View style={styles.boxData}>
                         <Text style={styles.columnNameText}>Quantity</Text>
@@ -100,7 +98,7 @@ export default class BucketModal extends Component {
                         >
                             <View style={{backgroundColor: '#000000cc', blurType: "dark",flex: 1}}>
                                 <View style={styles.testModal}>
-                                    <AddItemModal closeModal={() => this.toggleModal()} onInputChanged={this.onInputChanged}/>
+                                    <AddItemModal closeModal={() => this.toggleModal()} addItem={this.addItem}/>
                                 </View>
                             </View>
                         </Modal>
@@ -112,7 +110,7 @@ export default class BucketModal extends Component {
                             <AntDesign name={"plus"} size={30}/>
                         </TouchableOpacity>
 
-                        <Text style={styles.addText}>{this.state.name}</Text>
+                        <Text style={styles.addText}>Add New</Text>
                     </View>
                 </View>
             </SafeAreaView>
