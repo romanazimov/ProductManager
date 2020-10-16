@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import { StyleSheet, View, Text} from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
-import { DrawerContent } from '../screens/DrawerContent'
-import MainPage from "./MainPage";
+import { DrawerContent } from './DrawerContent'
+import MainPage from "../screens/MainPage";
 
 const Drawer = createDrawerNavigator();
 

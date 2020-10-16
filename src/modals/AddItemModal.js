@@ -32,7 +32,7 @@ export default class AddItemModal extends Component {
         this.state.newItemName = ""
         this.state.newItemQuantity = ""
         this.state.newItemLocation = ""
-        // console.log(this.state.newItemLocation)
+        // console.log("This is the child class: " + this.state.newItemLocation)
         this.props.closeModal()
 
     }

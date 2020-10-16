@@ -10,7 +10,6 @@ export default class BucketModal extends Component {
         name: "",
         quantity: "",
         location: "",
-        counter: 0
     }
 
     // Per item container
@@ -31,13 +30,16 @@ export default class BucketModal extends Component {
     }
 
     addItem = (item) => {
-        this.state.name = item.newName
-        this.state.quantity = item.newQuantity
-        this.state.location = item.newLocation
+        // this.state.name = item.newName
+        // this.state.quantity = item.newQuantity
+        // this.state.location = item.newLocation
 
-        console.log('This is the changed text: ', this.state.name);
-        console.log('This is the changed text: ', this.state.quantity);
-        console.log('This is the changed text: ', this.state.location);
+        let list = this.props.list
+        list.info.push({quantity: item.newQuantity, name: item.newName, location: item.newLocation})
+
+        this.props.updateBucket(list)
+        this.setState({name: "", quantity: "", location: ""})
+        // console.log('This is the changed text: ', this.state.name);
     }
 
     toggleModal() {

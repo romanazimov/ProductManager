@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Modal } from 'react-native';
-import BucketModal from "./BucketModal";
+import BucketModal from "../modals/BucketModal";
 
 export default class BucketCollection extends Component {
     state = {

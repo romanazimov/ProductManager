@@ -4,13 +4,41 @@ import firebase from "firebase";
 import tempData from "../data/tempData";
 import BucketCollection from "./BucketCollection";
 import AntDesign from "react-native-vector-icons/AntDesign";
-import AddBucketModal from "./AddBucketModal";
+import AddBucketModal from "../modals/AddBucketModal";
+import App from "../../App";
 
 export default class MainPage extends Component {
     state = {
         isVisible: false,
-        buckets: tempData
+        buckets: tempData,
+        uid: firebase.auth().currentUser.uid,
+        // loading: true
     }
+
+    // getBuckets(callback) {
+    //     let ref = firebase.firestore()
+    //         .collection('users')
+    //         .doc(this.uid)
+    //         .collection('buckets')
+    //
+    //     this.unsubscribe = ref.onSnapshot(snapshot => {
+    //         buckets = []
+    //
+    //         snapshot.forEach(doc => {
+    //             buckets.push({id: doc.id, ...doc.data()})
+    //         })
+    //
+    //         callback(buckets)
+    //     })
+    // }
+
+    // getBucketData() {
+    //     this.getBuckets(buckets => {
+    //         this.setState({buckets, user}, () => {
+    //             this.setState({loading: false})
+    //         })
+    //     })
+    // }
 
     toggleAddBucketModal() {
         this.setState({ isVisible: !this.state.isVisible})
@@ -33,7 +61,7 @@ export default class MainPage extends Component {
     }
 
     render() {
-        //const invCount = list.info.filter()
+        console.log('This is the current uid: ', this.state.uid);
         return (
             <View style={styles.container}>
                 {/*UI for loading into Bucket and out of it*/}

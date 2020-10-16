@@ -2,7 +2,7 @@ import React from 'react';
 import { createAppContainer } from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
 
-import  DrawerNav from '../screens/DrawerNav';
+import  DrawerNav from '../drawerNavigator/DrawerNav';
 import  SecondaryScreen from '../screens/SecondaryScreen';
 
 
