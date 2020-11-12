@@ -91,8 +91,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'center',
-        alignItems: 'center',
-        borderWidth: 5
+        alignItems: 'center'
     },
     inputBox: {
         borderWidth: StyleSheet.hairlineWidth,
@@ -122,7 +121,5 @@ const styles = StyleSheet.create({
         borderColor: "#000",
         justifyContent: 'center',
         alignItems: 'center',
-    },
-    textinside: {
     }
 });

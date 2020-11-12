@@ -1,21 +1,39 @@
 import React, { Component } from 'react';
 import {View, Text, StyleSheet, FlatList, TouchableOpacity, Modal} from 'react-native';
-import firebase from "firebase";
 import tempData from "../data/tempData";
 import BucketCollection from "./BucketCollection";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import AddBucketModal from "../modals/AddBucketModal";
 import {connect} from 'react-redux';
+import firebaseInfo from "../firebase/firebaseInfo";
 
 class MainPage extends Component {
     state = {
         isVisible: false,
-        buckets: tempData,
-        uid: firebase.auth().currentUser.uid,
+        buckets: [],
+        user: {},
+        loading: true
+        //uid: firebase.auth().currentUser.uid,
     }
 
     componentDidMount() {
+        firebase = new firebaseInfo((error, user) => {
+            if (error) {
+                return alert("Something went wrong")
+            }
 
+            firebase.getLists(buckets => {
+                this.setState({buckets, user}, () => {
+                    this.setState({ loading: false })
+                })
+            })
+
+            this.setState({user})
+        })
+    }
+
+    componentWillUnmount() {
+        firebaseInfo.detach()
     }
 
     toggleAddBucketModal() {
@@ -27,19 +45,19 @@ class MainPage extends Component {
     }
 
     addBucket = list => {
-        this.setState({ buckets: [...this.state.buckets, { ...list, id: this.state.buckets.length + 1, info: [] }] })
-    }
-
-    updateBucket = list => {
-        this.setState({
-            buckets: this.state.buckets.map(item => {
-                return item.id === list.id ? list : item
-            })
+        firebase.addBucket({
+            name: list.name,
+            color: list.color,
+            info: []
         })
     }
 
+    updateBucket = list => {
+        firebase.updateBucketList(list)
+    }
+
     render() {
-        //console.log('This is the current uid: ', this.state.uid);
+        console.log('This is the current uid: ', this.state.user.uid);
         return (
             <View style={styles.container}>
                 {/*UI for loading into Bucket and out of it*/}

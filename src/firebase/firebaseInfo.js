@@ -1,4 +1,5 @@
 import firebase from 'firebase'
+import "@firebase/firestore"
 import "@react-native-firebase/firestore";
 import BucketCollection from "../screens/BucketCollection";
 import React from "react";
@@ -16,7 +17,11 @@ const firebaseConfig = {
 }
 
 
-export default class firebaseInfo {
+class firebaseInfo {
+    constructor(callback) {
+        this.init(callback)
+    }
+
     // Grab current state of auth
     state={
         loggedIn:null,
@@ -24,31 +29,66 @@ export default class firebaseInfo {
     };
 
 
-    getLoggedInState = () => {
-        return this.state.loggedIn
-    }
+    // getLoggedInState = () => {
+    //     return this.state.loggedIn
+    // }
 
-    init() {
+    init(callback) {
         // Initialize Firebase
         if (!firebase.apps.length){
             firebase.initializeApp(firebaseConfig);
         }
 
-
-        //firebase.initializeApp(firebaseConfig);
-
-
         firebase.auth().onAuthStateChanged(user => {
             if (user){
-                this.setState({
-                    loggedIn: true, user
-                });
+                this.state.user = true
+                callback(null, user)
             } else {
-                this.setState({
-                    loggedIn: false
-                });
+                this.state.user = false
 
             }
         })
     }
+
+    getLists(callback) {
+        let ref = this.ref.orderBy('name')
+
+        this.unsubscribe = ref.onSnapshot(snapshot => {
+            buckets = []
+
+            snapshot.forEach(doc => {
+                buckets.push({ id: doc.id, ...doc.data() })
+            })
+
+            callback(buckets)
+        })
+    }
+
+    addBucket(buckets) {
+        let ref = this.ref
+        ref.add(buckets)
+    }
+
+    updateBucketList(buckets) {
+        let ref = this.ref
+        ref.doc(buckets.id).update(buckets)
+    }
+
+    get userId() {
+        return firebase.auth().currentUser.uid
+    }
+
+    detach() {
+        this.unsubscribe()
+    }
+
+    get ref() {
+        return firebase
+            .firestore()
+            .collection('users')
+            .doc(this.userId)
+            .collection('buckets')
+    }
 }
+
+export default firebaseInfo

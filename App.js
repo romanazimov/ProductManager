@@ -53,7 +53,6 @@ class App extends Component {
 
     renderContent = () => {
          switch (this.state.loggedIn) {
-        //switch (firebaseInfo.getLoggedInState()) {
             // If loggedIn visit Bucket DB
             case true:
                 return <HomeNavigator/>
